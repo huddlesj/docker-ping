@@ -1,8 +1,8 @@
 FROM alpine:3.5
 
-RUN groupadd -g 9000 pinguser && \
-    useradd -r -u 9000 -g pinguser pinguser
-USER appuser
+RUN addgroup -g 9000 pinguser && \
+    adduser -S -u 9000 -G pinguser pinguser
+USER pinguser
 
 COPY ping /
 
