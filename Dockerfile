@@ -1,7 +1,8 @@
 FROM centos:7
 
-RUN addgroup -g 9000 pinguser && \
-    adduser -S -u 9000 -G pinguser pinguser
+RUN groupadd -g 999 pinguser && \
+    useradd -r -u 999 -g pinguser pinguser
+    
 USER pinguser
 
 COPY ping /
