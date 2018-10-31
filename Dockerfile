@@ -1,4 +1,4 @@
-FROM alpine:3.5
+FROM centos:7
 
 RUN addgroup -g 9000 pinguser && \
     adduser -S -u 9000 -G pinguser pinguser
